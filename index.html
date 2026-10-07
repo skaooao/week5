@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>click</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+<body>
+  <main>
+    <h1>click</h1>
+    <p>click<output id="count-value" aria-live="polite">0</output></p>
+    <div
+      id="color-box"
+      role="img"
+      aria-label="计数颜色提示框"
+      style="width: 120px; height: 120px; background-color: yellow;"
+    ></div>
+    <button type="button" onclick="countToTen()">click</button>
+  </main>
+</body>
+</html>
