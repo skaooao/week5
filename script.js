@@ -3,6 +3,7 @@ const failure = document.getElementById("failure");
 const success = document.getElementById("success");
 const completePanel = document.getElementById("complete");
 const caughtCount = document.getElementById("caught-count");
+const rating = document.getElementById("rating");
 document.getElementById("yes").addEventListener("click", function () {
     popup.hidden = true;
     success.hidden = false;
@@ -52,6 +53,15 @@ function finishDive() {
 
   isFinished = true;
   caughtCount.textContent = score;
+  if (score === 12) {
+    rating.textContent = "Rating: Perfect";
+  } else if (score >= 8) {
+    rating.textContent = "Rating: Excellent";
+  } else if (score >= 5) {
+    rating.textContent = "Rating: Good";
+  } else {
+    rating.textContent = "Rating: Average";
+  }
   completePanel.hidden = false;
   fishZones.forEach(function (fish) {
     fish.zone.hidden = true;
