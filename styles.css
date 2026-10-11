@@ -8,10 +8,7 @@ body {
 	background-size: cover;
 }
 
-button,
-input,
-select,
-textarea {
+button {
 	font: inherit;
 }
 
@@ -36,6 +33,12 @@ textarea {
 
 .s2 {
   background-image: url("images/peopleonsea.png");
+}
+
+#really-large-div {
+	width: 100%;
+	min-height: 4600px;
+	background-color: #2556b0;
 }
 
 .overlay {
@@ -63,15 +66,25 @@ textarea {
 	box-shadow: 10px 10px 0 rgb(0 0 0 / 35%);
 }
 
-.label {
-	margin: 0 0 24px;
-	color: #c44c35;
-	font-size: 10px;
-}
-
 #question {
 	font-size: 14px;
 	line-height: 1.8;
+}
+
+#failure,
+#success {
+	color: #fff;
+	text-align: center;
+	text-shadow: 2px 2px 0 #14253d;
+}
+
+#restart,
+#restart-complete {
+	padding: 12px 16px;
+	border: 2px solid #f2c14e;
+	background: #173b43;
+	color: #fff;
+	cursor: pointer;
 }
 
 .actions {
@@ -94,6 +107,35 @@ textarea {
 	background: #f2c14e;
 }
 
+.fixed-box {
+  position: fixed;
+	z-index: 5;
+	padding: 12px 16px;
+	border: 2px solid #f2c14e;
+	background: rgb(12 29 54 / 88%);
+	color: #fff;
+	text-align: center;
+}
+
+	.scoreboard {
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		z-index: 6;
+		padding: 12px 16px;
+		border: 2px solid #f2c14e;
+		background: rgb(12 29 54 / 88%);
+		color: #fff;
+		font-size: 12px;
+	}
+
+#box-scroll-values {
+	right: 20px;
+	bottom: 20px;
+	min-width: 180px;
+}
+
+
 @media (max-width: 480px) {
 	.box {
 		padding: 32px 20px 24px;
@@ -103,4 +145,131 @@ textarea {
 		min-width: 0;
 		flex: 1;
 	}
+}
+
+.fish-zone,
+.goby-zone {
+	position: fixed;
+	z-index: 4;
+	display: grid;
+	place-items: center;
+	background: transparent;
+}
+
+.fish-zone[hidden],
+.goby-zone[hidden],
+.fish-zone img[hidden],
+.goby-zone img[hidden] {
+	display: none;
+}
+
+.fish-zone img,
+#goby {
+	width: 160px;
+	image-rendering: pixelated;
+	cursor: pointer;
+}
+
+.goby-zone {
+	top: 22%;
+	left: 22%;
+	width: 180px;
+	height: 100px;
+}
+
+.fish-clownfish {
+	top: 42%;
+	left: 75%;
+	width: 210px;
+	height: 120px;
+}
+
+.fish-angelfish {
+	top: 70%;
+	left: 28%;
+	width: 150px;
+	height: 200px;
+}
+
+.fish-angelfish img {
+	width: 115px;
+}
+
+.fish-pufferfish {
+	top: 62%;
+	left: 76%;
+	width: 170px;
+	height: 150px;
+}
+
+.fish-anglerfish {
+	top: 16%;
+	left: 54%;
+	width: 220px;
+	height: 140px;
+}
+
+.fish-butterflyfish {
+	top: 56%;
+	left: 5%;
+	width: 180px;
+	height: 120px;
+}
+
+.fish-tuna {
+	top: 40%;
+	left: 48%;
+	width: 200px;
+	height: 120px;
+}
+
+.fish-oarfish {
+	top: 79%;
+	left: 50%;
+	width: 280px;
+	height: 100px;
+}
+
+.fish-oarfish img {
+	width: 240px;
+}
+
+.fish-cardinalfish {
+	top: 8%;
+	left: 5%;
+	width: 140px;
+	height: 80px;
+}
+
+.fish-cardinalfish img {
+	width: 120px;
+}
+
+.fish-hatchetfish {
+	top: 8%;
+	left: 82%;
+	width: 180px;
+	height: 120px;
+}
+
+.fish-lanternfish {
+	top: 88%;
+	left: 3%;
+	width: 200px;
+	height: 90px;
+}
+
+.fish-lanternfish img {
+	width: 180px;
+}
+
+.fish-wrasse {
+	top: 88%;
+	left: 80%;
+	width: 170px;
+	height: 90px;
+}
+
+.fish-wrasse img {
+	width: 150px;
 }

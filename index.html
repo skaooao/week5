@@ -12,6 +12,8 @@
   </head>
 
   <body>
+    <div class="scoreboard" aria-live="polite" hidden>SCORE <span id="score">0</span></div>
+
     <section class="s0 parallax">
         <p>Scuba Diving...</p>
     </section>
@@ -21,8 +23,11 @@
     </section>
 
     <section class="s2 parallax">
-      <p id="failure" hidden>You failed!</p>
-      <p id="success" hidden>Click yourself to go diving.</p>
+      <div id="failure" hidden>
+        <p>You failed!</p>
+        <button id="restart" type="button">Restart</button>
+      </div>
+      <p id="success" hidden>Click the diver to start, then scroll down to find the fish!</p>
     </section>
 
     <div class="overlay" id="popup" hidden>
@@ -33,8 +38,69 @@
           <button id="no" type="button">No</button>
         </div>
       </section>
-      
-      
+    </div>
+
+    <div class="overlay" id="complete" hidden>
+      <section class="box" role="alertdialog" aria-modal="true" aria-labelledby="complete-title">
+        <p id="complete-title">Dive complete!</p>
+        <p>You caught <span id="caught-count">0</span> fish!</p>
+        <button id="restart-complete" type="button">Restart</button>
+      </section>
+    </div>
+
+    <div id="really-large-div" hidden>
+      <!-- empty -->
+    </div>
+
+    <div id="box-scroll-values" class="fixed-box" hidden>
+      <p>DIVE DEPTH</p>
+      <p><span id="depth">0</span> m</p>
+    </div>
+
+    <div id="box-center" class="fixed-box" hidden>
+      <p id="content-center"></p>
+    </div>
+
+    <div hidden>
+      <p>event.clientX: <span id="client-x">0</span> px</p>
+      <p>event.clientY: <span id="client-y">0</span> px</p>
+    </div>
+
+    <div id="goby-zone" class="goby-zone" hidden>
+      <img id="goby" src="images/goby.png" alt="Goby fish" hidden />
+    </div>
+    <div class="fish-zone fish-clownfish" hidden>
+      <img src="images/clownfish.png" alt="Clownfish" hidden />
+    </div>
+    <div class="fish-zone fish-angelfish" hidden>
+      <img src="images/angelfish.png" alt="Angelfish" hidden />
+    </div>
+    <div class="fish-zone fish-pufferfish" hidden>
+      <img src="images/pufferfish.png" alt="Pufferfish" hidden />
+    </div>
+    <div class="fish-zone fish-anglerfish" hidden>
+      <img src="images/anglerfish.png" alt="Anglerfish" hidden />
+    </div>
+    <div class="fish-zone fish-butterflyfish" hidden>
+      <img src="images/butterflyfish.png" alt="Butterflyfish" hidden />
+    </div>
+    <div class="fish-zone fish-tuna" hidden>
+      <img src="images/tuna.png" alt="Tuna" hidden />
+    </div>
+    <div class="fish-zone fish-oarfish" hidden>
+      <img src="images/oarfish.png" alt="Oarfish" hidden />
+    </div>
+    <div class="fish-zone fish-cardinalfish" hidden>
+      <img src="images/cardinalfish.png" alt="Cardinalfish" hidden />
+    </div>
+    <div class="fish-zone fish-hatchetfish" hidden>
+      <img src="images/hatchetfish.png" alt="Hatchetfish" hidden />
+    </div>
+    <div class="fish-zone fish-lanternfish" hidden>
+      <img src="images/lanternfish.png" alt="Lanternfish" hidden />
+    </div>
+    <div class="fish-zone fish-wrasse" hidden>
+      <img src="images/wrasse.png" alt="Wrasse" hidden />
     </div>
     
 </body>
